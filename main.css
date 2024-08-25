@@ -1,0 +1,226 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font-family: sans-serif;
+   background-image: url(./images/bg-intro-desktop.png);
+   background-color: hsl(0, 100%, 74%);
+   margin: 0;
+   padding: 20px;
+}
+
+/* Start styling text */
+.container {
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   margin: 10px auto;
+   flex-direction: column;
+   text-align: center;
+}
+
+/* For screens wider than 768px (tablets and up) */
+@media only screen and (min-width: 768px) {
+   .container {
+      flex-direction: row;
+      text-align: left;
+      padding: 20px;
+   }
+}
+
+.container .text {
+   max-width: 400px;
+   margin-bottom: 20px;
+}
+
+.container .text h3 {
+   margin-bottom: 20px;
+   color: white;
+   font-size: 36px;
+}
+
+/* For screens wider than 768px */
+@media only screen and (min-width: 768px) {
+   .container .text h3 {
+      font-size: 50px;
+   }
+}
+
+.container .text p {
+   line-height: 1.7;
+   color: white;
+   opacity: 0.8;
+   font-size: 16px;
+   margin-bottom: 20px;
+}
+
+/* For screens wider than 768px */
+@media only screen and (min-width: 768px) {
+   .container .text p {
+      font-size: 18px;
+   }
+}
+
+/* End text */
+
+/* Start styling input box */
+.container .input-box .head {
+   background-color: hsl(248, 32%, 49%);
+   padding: 17px 15px;
+   color: white;
+   font-weight: 600;
+   text-align: center;
+   margin-bottom: 20px;
+   border-radius: 8px;
+   box-shadow: 4px 5px 9px 1px hsl(249, 10%, 26%);
+}
+
+.container .input-box .head span {
+   color: white;
+   opacity: 0.8;
+   font-weight: normal;
+}
+
+.container .inputs {
+   background-color: white;
+   padding: 20px;
+   width: 100%;
+   max-width: 550px;
+   border-radius: 8px;
+   box-shadow: 5px 5px 11px 0px hsl(249, 10%, 26%);
+   position: relative;
+}
+
+/* For screens wider than 768px */
+@media only screen and (min-width: 768px) {
+   .container .inputs {
+      padding: 30px;
+      height: auto;
+   }
+}
+
+.container .inputs input {
+   display: block;
+   margin: 15px auto;
+   margin-bottom: 30px;
+
+   padding: 10px 20px;
+   width: 100%;
+   max-width: 500px;
+   height: 48px;
+   border-radius: 8px;
+   border: solid 1px #ddd;
+   font-size: 16px;
+   transition: 0.3s;
+   font-weight: 600;
+   position: relative;
+}
+
+/* For screens wider than 768px */
+@media only screen and (min-width: 768px) {
+   .container .inputs input {
+      height: 58px;
+      font-size: 18px;
+   }
+}
+
+.container .inputs input:focus {
+   outline: 1px solid hsl(249, 10%, 26%);
+}
+
+.container .inputs button,
+.container .inputs .button {
+   display: block;
+   margin: 10px auto;
+   background-color: hsl(154, 59%, 51%);
+   color: white;
+   padding: 10px 20px;
+   width: 100%;
+   max-width: 500px;
+   height: 48px;
+   border-radius: 8px;
+   box-shadow: 1px 2px 7px 1px #0404045c;
+   border-style: none;
+   cursor: pointer;
+   transition: 0.2s;
+   font-size: 16px;
+   font-weight: 500;
+
+}
+
+
+.container .inputs .button:hover {
+   background-color: hsl(154, 69%, 35%)
+}
+
+.container .inputs .button:focus {
+   outline: none;
+}
+
+/* For screens wider than 768px */
+@media only screen and (min-width: 768px) {
+
+   .container .inputs button,
+   .container .inputs .button {
+      height: 58px;
+      font-size: 18px;
+   }
+}
+
+.inputs .clicking {
+   margin: 20px auto;
+   font-size: 13px;
+   text-align: center;
+   color: #d0cdcd;
+   font-weight: 500;
+}
+
+.inputs .clicking span {
+   color: hsl(0, 100%, 74%);
+}
+
+/* Form validation errors */
+.container .inputs input.error {
+   border: solid 2px hsl(0, 100%, 74%);
+}
+
+.container .inputs input.error::placeholder {
+   color: rgba(255, 0, 0, 0.634);
+}
+
+.wrong {
+   position: absolute;
+   font-size: 13px;
+   font-style: italic;
+   right: 9px;
+   color: hsl(0deg 83.43% 64.83%);
+   bottom: -15px;
+   font-weight: 700;
+   transition: 0.6s;
+}
+
+.first,
+.last,
+.password,
+.email {
+   position: relative;
+}
+
+img.error-photo {
+   position: absolute;
+   top: 18px;
+   right: 20px;
+   z-index: 10;
+}
+
+/* Adjust error-photo position for larger screens */
+@media only screen and (max-width: 768px) {
+   img.error-photo {
+
+      top: 13px;
+
+   }
+}
